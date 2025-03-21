@@ -41,11 +41,12 @@ namespace speaking_clock
                 if (command.ToLower() == "what time is it?")
                 {
                     await TellTime();
+                    await MyMessage();
                 }
-
-                await MyMessage();
-
-
+                else
+                {
+                    Console.WriteLine("I'm sorry, I didn't understand that command.");
+                }
             }
             catch (Exception ex)
             {
